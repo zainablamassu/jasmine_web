@@ -1676,6 +1676,14 @@ section {
     background-color: #F8F9FA;
     width: 90px;
   }
+  #imgKinder::before {
+    content: "صورة الطفل";
+    position: absolute;
+    z-index: 2;
+    display: block;
+    background-color: #F8F9FA;
+    width: 90px;
+  }
 
 #footer .footer-newsletter form input[type=email] {
   border: 0;

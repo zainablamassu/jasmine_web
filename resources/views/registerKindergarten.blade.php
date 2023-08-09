@@ -49,7 +49,7 @@
                 @enderror
                   </div>
                   <div class="mb-3 col-md-6">
-                    <input type="file" name="image" class="form-control" value="{{ old('image') }}" placeholder="صورة الطفل">
+                    <input type="file" name="image" class="form-control" value="{{ old('image') }}" id="imgKinder" placeholder="صورة الطفل">
                   </div>
                   <div class="mb-3 col-md-6">
                     <div class="form-outline datepicker">
@@ -252,7 +252,7 @@
                   </div>
 
                   <div class="mb-3 col-md-6">
-                    <input type="text" class="form-control" name="allergic" value="{{ old('allergic') }}"  placeholder="اذكر نوع الحساسية">
+                    <input type="text" class="form-control" name="allergic" id="allergic" style="display: none" value="{{ old('allergic') }}"  placeholder="اذكر نوع الحساسية">
                         @error('allergic')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -284,11 +284,18 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    <script>
         $(function(){
         $('#code').keyup(function(){
             this.value = this.value.toUpperCase();
         });
+        $("#is_allergic1").click(function () {
+            $("#allergic").css("display", "block");
+            $("#allergic").css("display", "block");
+         });
+
+        $("#is_allergic2").click(function () {
+            $("#allergic").css("display", "none");
+         });
         $('#datepicker').pickadate({
             format:'yyyy-mm-dd',
             selectMonths:true,
@@ -323,7 +330,6 @@
         });
     });
     </script>
-  </script>
   <script src="">
     var datepickerTranslated = document.querySelector('.datepicker-translated');
 new mdb.Datepicker(datepickerTranslated, {

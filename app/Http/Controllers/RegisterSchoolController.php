@@ -139,7 +139,7 @@ class RegisterSchoolController extends Controller
             "fatherPhone"=> "required|string",
             "motherPhone"=> "required|string",
             "is_allergic"=> "nullable",
-            "allergic"=> "required|string",
+            "allergic"=> "nullable|string",
             "diseases"=> "required|string",
         ]
     );
